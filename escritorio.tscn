@@ -1,9 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://duseecrx0o6it"]
+[gd_scene load_steps=5 format=3 uid="uid://duseecrx0o6it"]
+
+[ext_resource type="Texture2D" uid="uid://bfjtv8b3bfo2o" path="res://WoodSeemles.jpg" id="1_p7by7"]
+[ext_resource type="ArrayMesh" uid="uid://b4ya3wnx7t3w6" path="res://table.obj" id="2_i533g"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_3kkd5"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2kj1b"]
+albedo_texture = ExtResource("1_p7by7")
+
 [node name="escritorio" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.117984)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.82806, 0.560639, 0, -0.560639, 0.82806, -0.158179, 1.031, -1.38034)
+fov = 52.0
 
 [node name="chão" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.12, 0, 0, 0, 0.08, 0, 0, 0, 1.12, -0.223587, 0, -0.857544)
@@ -33,5 +43,14 @@ transform = Transform3D(-4.89568e-08, -0.08, 2.49155e-08, 0, -3.49691e-09, -0.57
 transform = Transform3D(2.14, 0, 0, 0, 0.82, 0, 0, 0, 2.14, 0, 0, 0.541551)
 mesh = SubResource("PlaneMesh_3kkd5")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.933261, 0.359199, 0, -0.359199, 0.933261, 0, 0.795571, -0.367967)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.933261, 0.359199, 0, -0.359199, 0.933261, 0.000346661, 0.748431, -0.558373)
+
+[node name="Table" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(-0.01, 0, 0, 0, 0.00653283, -0.00251439, 0, 0.00251439, 0.00653283, -0.150622, 0.220456, -2.18293)
+material_override = SubResource("StandardMaterial3D_2kj1b")
+mesh = ExtResource("2_i533g")
+skeleton = NodePath("../..")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.264952, 1.62271, -2.18486)
