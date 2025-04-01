@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://duseecrx0o6it"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_3kkd5"]
+
+[node name="escritorio" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.117984)
+
+[node name="chão" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.12, 0, 0, 0, 0.08, 0, 0, 0, 1.12, -0.223587, 0, -0.857544)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="chão"]
+transform = Transform3D(2.14, 0, 0, 0, 0.82, 0, 0, 0, 2.14, 0, 0, 0.541551)
+mesh = SubResource("PlaneMesh_3kkd5")
+
+[node name="paredeFrente" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.12, 0, 0, 0, -3.49691e-09, -0.57, 0, 0.08, -2.49155e-08, -0.223587, 1.12461, -2.48665)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="paredeFrente"]
+transform = Transform3D(2.14, 0, 0, 0, 0.82, 0, 0, 0, 2.14, 0, 0, 0.541551)
+mesh = SubResource("PlaneMesh_3kkd5")
+
+[node name="paredeLado1" type="CollisionShape3D" parent="."]
+transform = Transform3D(-5.11423e-08, 0.08, -2.36041e-08, 0, -3.49691e-09, -0.54, -1.17, -3.49691e-09, 1.03177e-15, -2.33658, 1.39331, -0.141819)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="paredeLado1"]
+transform = Transform3D(2.14, 0, 0, 0, 0.82, 0, 0, 0, 2.14, 0, 0, 0.541551)
+mesh = SubResource("PlaneMesh_3kkd5")
+
+[node name="paredeLado2" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.89568e-08, -0.08, 2.49155e-08, 0, -3.49691e-09, -0.57, 1.12, -3.49691e-09, 1.08909e-15, 2.16592, 1.45642, -0.141819)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="paredeLado2"]
+transform = Transform3D(2.14, 0, 0, 0, 0.82, 0, 0, 0, 2.14, 0, 0, 0.541551)
+mesh = SubResource("PlaneMesh_3kkd5")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.933261, 0.359199, 0, -0.359199, 0.933261, 0, 0.795571, -0.367967)
