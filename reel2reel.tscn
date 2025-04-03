@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dogcaj11qbpda"]
+
+[ext_resource type="PackedScene" uid="uid://3736gwq68xww" path="res://reel-to-reel_tape_recorder/scene.gltf" id="1_5skst"]
+[ext_resource type="Script" uid="uid://bkhcfebtqblex" path="res://reel2reel.gd" id="2_kwotf"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_5skst")]
+script = ExtResource("2_kwotf")
+
+[node name="Object_9" parent="Sketchfab_model/a5646361d3974a718e2e09ab2c4b80eb_fbx/RootNode/PI_REC_METER_B" index="0"]
+transform = Transform3D(1, 0, 0, -8.01416e-24, 1, 0, 1.72717e-15, -1.42109e-14, 1, -0.858923, 1.22956, 0)
+script = ExtResource("2_kwotf")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvh5ygmuw0myq"]
+
+[ext_resource type="PackedScene" uid="uid://ynd0wbpvrbb3" path="res://concrette_wall/scene.gltf" id="1_dkr1i"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_dkr1i")]
+
+[node name="Object_2" parent="Sketchfab_model/cocrette_wall_obj_cleaner_materialmerger_gles" index="0"]
+gi_mode = 2
+gi_lightmap_texel_scale = 0.01
+
+[node name="Object_3" parent="Sketchfab_model/cocrette_wall_obj_cleaner_materialmerger_gles" index="1"]
+gi_mode = 2
+
+[node name="Object_4" parent="Sketchfab_model/cocrette_wall_obj_cleaner_materialmerger_gles" index="2"]
+gi_mode = 2

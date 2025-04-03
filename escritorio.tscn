@@ -1,56 +1,49 @@
-[gd_scene load_steps=5 format=3 uid="uid://duseecrx0o6it"]
+[gd_scene load_steps=7 format=3 uid="uid://duseecrx0o6it"]
 
-[ext_resource type="Texture2D" uid="uid://bfjtv8b3bfo2o" path="res://WoodSeemles.jpg" id="1_p7by7"]
-[ext_resource type="ArrayMesh" uid="uid://b4ya3wnx7t3w6" path="res://table.obj" id="2_i533g"]
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_3kkd5"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2kj1b"]
-albedo_texture = ExtResource("1_p7by7")
+[ext_resource type="Script" uid="uid://dsoum6sd58yfh" path="res://mainCam.gd" id="1_i533g"]
+[ext_resource type="PackedScene" uid="uid://chamks4ta8a4k" path="res://antique_wall_clock/scene.gltf" id="3_i533g"]
+[ext_resource type="PackedScene" uid="uid://dogcaj11qbpda" path="res://reel2reel.tscn" id="4_2kj1b"]
+[ext_resource type="PackedScene" uid="uid://b0kcubdcejwn8" path="res://table/scene.gltf" id="4_jen72"]
+[ext_resource type="PackedScene" uid="uid://di2b7reulunrx" path="res://wooden_floor/scene.gltf" id="5_4qoa3"]
+[ext_resource type="PackedScene" uid="uid://ynd0wbpvrbb3" path="res://concrette_wall/scene.gltf" id="6_x5fet"]
 
 [node name="escritorio" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.117984)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.01155)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.82806, 0.560639, 0, -0.560639, 0.82806, -0.158179, 1.031, -1.38034)
+transform = Transform3D(1, 0, 0, 0, 0.987414, 0.158158, 0, -0.158158, 0.987414, -0.129408, 1.10418, 0.065923)
 fov = 52.0
-
-[node name="chão" type="CollisionShape3D" parent="."]
-transform = Transform3D(1.12, 0, 0, 0, 0.08, 0, 0, 0, 1.12, -0.223587, 0, -0.857544)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="chão"]
-transform = Transform3D(2.14, 0, 0, 0, 0.82, 0, 0, 0, 2.14, 0, 0, 0.541551)
-mesh = SubResource("PlaneMesh_3kkd5")
-
-[node name="paredeFrente" type="CollisionShape3D" parent="."]
-transform = Transform3D(1.12, 0, 0, 0, -3.49691e-09, -0.57, 0, 0.08, -2.49155e-08, -0.223587, 1.12461, -2.48665)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="paredeFrente"]
-transform = Transform3D(2.14, 0, 0, 0, 0.82, 0, 0, 0, 2.14, 0, 0, 0.541551)
-mesh = SubResource("PlaneMesh_3kkd5")
-
-[node name="paredeLado1" type="CollisionShape3D" parent="."]
-transform = Transform3D(-5.11423e-08, 0.08, -2.36041e-08, 0, -3.49691e-09, -0.54, -1.17, -3.49691e-09, 1.03177e-15, -2.33658, 1.39331, -0.141819)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="paredeLado1"]
-transform = Transform3D(2.14, 0, 0, 0, 0.82, 0, 0, 0, 2.14, 0, 0, 0.541551)
-mesh = SubResource("PlaneMesh_3kkd5")
-
-[node name="paredeLado2" type="CollisionShape3D" parent="."]
-transform = Transform3D(-4.89568e-08, -0.08, 2.49155e-08, 0, -3.49691e-09, -0.57, 1.12, -3.49691e-09, 1.08909e-15, 2.16592, 1.45642, -0.141819)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="paredeLado2"]
-transform = Transform3D(2.14, 0, 0, 0, 0.82, 0, 0, 0, 2.14, 0, 0, 0.541551)
-mesh = SubResource("PlaneMesh_3kkd5")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.933261, 0.359199, 0, -0.359199, 0.933261, 0.000346661, 0.748431, -0.558373)
-
-[node name="Table" type="MeshInstance3D" parent="CollisionShape3D"]
-transform = Transform3D(-0.01, 0, 0, 0, 0.00653283, -0.00251439, 0, 0.00251439, 0.00653283, -0.150622, 0.220456, -2.18293)
-material_override = SubResource("StandardMaterial3D_2kj1b")
-mesh = ExtResource("2_i533g")
-skeleton = NodePath("../..")
+script = ExtResource("1_i533g")
+target_position = Vector3(-0.013, 1.39, 0.85)
+target_rotation = Vector3(-28, 0, 0)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.264952, 1.62271, -2.18486)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.265, 2.263, -2.185)
+
+[node name="clock" parent="." instance=ExtResource("3_i533g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0269298, 1.13893, -2.44611)
+
+[node name="reel2reel" parent="." instance=ExtResource("4_2kj1b")]
+transform = Transform3D(0.389648, 0, -0.262821, 0, 0.47, 0, 0.262821, 0, 0.389648, 0.456881, 0.499817, -2.11369)
+
+[node name="mesa" parent="." instance=ExtResource("4_jen72")]
+transform = Transform3D(-3.15596e-07, 0, -9.311, 0, 7.22, 0, 7.22, 0, -4.06997e-07, -0.00239396, 0.0192716, -2.18594)
+
+[node name="chao" parent="." instance=ExtResource("5_4qoa3")]
+transform = Transform3D(-8.30516e-09, 0, -0.19, 0, 0.19, 0, 0.19, 0, -8.30516e-09, -0.0138288, 0, 0.236579)
+
+[node name="par1" parent="." instance=ExtResource("6_x5fet")]
+transform = Transform3D(0.43, 0, 0, 0, 0.43, 0, 0, 0, 0.43, -2.36858, 2.58613, 2.41476)
+
+[node name="Camera3D2" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.987414, 0.158158, 0, -0.158158, 0.987414, -0.129408, 1.10418, 0.065923)
+fov = 52.0
+script = ExtResource("1_i533g")
+target_position = Vector3(-0.12, 1.104, 0.53)
+target_rotation = Vector3(-27, 0, 0)
+
+[node name="par2" parent="." instance=ExtResource("6_x5fet")]
+transform = Transform3D(-1.87959e-08, 0, -0.43, 0, 0.43, 0, 0.43, 0, -1.87959e-08, -2.30996, 2.58613, -2.44455)
+
+[node name="par3" parent="." instance=ExtResource("6_x5fet")]
+transform = Transform3D(0.43, 0, 0, 0, 0.43, 0, 0, 0, 0.43, 2.53548, 2.58613, 2.41476)
