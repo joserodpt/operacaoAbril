@@ -1,0 +1,11 @@
+Model Information:
+* title:	Coat Hanger
+* source:	https://sketchfab.com/3d-models/coat-hanger-49f07e85c27e4428b99ba9cc9c0e08fd
+* author:	AlexC3D (https://sketchfab.com/AlexC3D)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Coat Hanger" (https://sketchfab.com/3d-models/coat-hanger-49f07e85c27e4428b99ba9cc9c0e08fd) by AlexC3D (https://sketchfab.com/AlexC3D) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

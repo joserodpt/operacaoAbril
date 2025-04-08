@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn6lxi517ah75"]
+
+[ext_resource type="PackedScene" uid="uid://d3og8qn3ifl6q" path="res://assets/wall_clock/scene.gltf" id="1_keny3"]
+[ext_resource type="Script" uid="uid://bufq64eat7yqr" path="res://clock.gd" id="2_78np4"]
+
+[node name="Sketchfab_Scene" node_paths=PackedStringArray("hours_pointer", "minutes_pointer", "seconds_pointer") instance=ExtResource("1_keny3")]
+script = ExtResource("2_78np4")
+hours_pointer = NodePath("Sketchfab_model/WallClock_LP_fbx/RootNode/Hours_Pointer/Hours_Pointer_Black_Pointer_0")
+minutes_pointer = NodePath("Sketchfab_model/WallClock_LP_fbx/RootNode/Minutes_Pointer/Minutes_Pointer_Black_Pointer_0")
+seconds_pointer = NodePath("Sketchfab_model/WallClock_LP_fbx/RootNode/Seconds_Pointer/Seconds_Pointer_Red_Pointer_0")

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Pencil Holder
+* source:	https://sketchfab.com/3d-models/pencil-holder-dfa6c8bfaf304ef4aebbb6ca257e88ba
+* author:	Everton Bohnenberger (https://sketchfab.com/BOHNEN)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Pencil Holder" (https://sketchfab.com/3d-models/pencil-holder-dfa6c8bfaf304ef4aebbb6ca257e88ba) by Everton Bohnenberger (https://sketchfab.com/BOHNEN) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

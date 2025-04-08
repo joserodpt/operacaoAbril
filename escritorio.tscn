@@ -1,29 +1,38 @@
-[gd_scene load_steps=9 format=3 uid="uid://duseecrx0o6it"]
+[gd_scene load_steps=14 format=3 uid="uid://duseecrx0o6it"]
 
 [ext_resource type="Script" uid="uid://dsoum6sd58yfh" path="res://mainCam.gd" id="1_i533g"]
-[ext_resource type="PackedScene" uid="uid://chamks4ta8a4k" path="res://assets/antique_wall_clock/scene.gltf" id="3_i533g"]
 [ext_resource type="PackedScene" uid="uid://dogcaj11qbpda" path="res://reel2reel.tscn" id="4_2kj1b"]
 [ext_resource type="PackedScene" uid="uid://b0kcubdcejwn8" path="res://assets/table/scene.gltf" id="4_jen72"]
 [ext_resource type="PackedScene" uid="uid://di2b7reulunrx" path="res://assets/wooden_floor/scene.gltf" id="5_4qoa3"]
 [ext_resource type="PackedScene" uid="uid://ul65k6jn3opk" path="res://assets/trash_can/scene.gltf" id="6_4qoa3"]
 [ext_resource type="PackedScene" uid="uid://da5yl6bi1y4wt" path="res://assets/concrete_wall/scene.gltf" id="7_x5fet"]
+[ext_resource type="PackedScene" uid="uid://dn6lxi517ah75" path="res://relogioMaisScript.tscn" id="8_faq3j"]
 [ext_resource type="PackedScene" uid="uid://dn3ektiuhmlpu" path="res://assets/old_phone/scene.gltf" id="8_nk7vd"]
+[ext_resource type="PackedScene" uid="uid://dg5l06vggycob" path="res://assets/coat_hanger/scene.gltf" id="9_faq3j"]
+[ext_resource type="PackedScene" uid="uid://66s14luws2gr" path="res://assets/pencil_holder/scene.gltf" id="10_2s007"]
+[ext_resource type="PackedScene" uid="uid://cx1am2b468sw1" path="res://assets/pencil/scene.gltf" id="11_6yvp7"]
+[ext_resource type="PackedScene" uid="uid://2sl7ptjd7ihs" path="res://assets/desk_calendar/scene.gltf" id="12_6yvp7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6yvp7"]
 
 [node name="escritorio" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.01155)
 
+[node name="reelClick" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.6492, 22.4902, 3.88144)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="reelClick"]
+shape = SubResource("BoxShape3D_6yvp7")
+
+[node name="reel2reel" parent="reelClick/CollisionShape3D" instance=ExtResource("4_2kj1b")]
+transform = Transform3D(16.664, 0, 2.05317, 0, 16.79, 0, -2.05317, 0, 16.664, 0, 0, 0)
+
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.982463, 0.186455, 0, -0.186455, 0.982463, 3.37281, 23.5414, 60.1198)
-fov = 52.0
+transform = Transform3D(1, 0, 0, 0, 0.997455, 0.0713059, 0, -0.0713059, 0.997455, 0.0927372, 22.5449, 116.342)
+fov = 19.9
 script = ExtResource("1_i533g")
-target_position = Vector3(3.373, 30.837, 41.854)
-target_rotation = Vector3(-23.1, 0, 0)
-
-[node name="clock" parent="." instance=ExtResource("3_i533g")]
-transform = Transform3D(21.28, 0, 0, 0, 21.28, 0, 0, 0, 21.28, 0.0269298, 27.3478, 0.210712)
-
-[node name="reel2reel" parent="." instance=ExtResource("4_2kj1b")]
-transform = Transform3D(12.9173, 0, 10.726, 0, 16.79, 0, -10.726, 0, 12.9173, -13.4718, 12.2203, 12.5829)
+target_position = Vector3(0.093, 37.503, 92.893)
+target_rotation = Vector3(-13, 0, 0)
 
 [node name="mesa" parent="." instance=ExtResource("4_jen72")]
 transform = Transform3D(-8.74228e-06, 0, -257.925, 0, 200, 0, 200, 0, -1.12743e-05, 0.123921, 0.0192716, 10.2676)
@@ -32,7 +41,7 @@ transform = Transform3D(-8.74228e-06, 0, -257.925, 0, 200, 0, 200, 0, -1.12743e-
 transform = Transform3D(-1.89707e-07, 0, -4.34, 0, 4.34, 0, 4.34, 0, -1.89707e-07, -0.0138288, 0, 61.879)
 
 [node name="trashcan" parent="." instance=ExtResource("6_4qoa3")]
-transform = Transform3D(0.00181103, 0, 0.039959, 0, 0.04, 0, -0.039959, 0, 0.00181103, 30.0524, 0, 11.0132)
+transform = Transform3D(-0.0074607, 0, 0.0290575, 0, 0.03, 0, -0.0290575, 0, -0.0074607, 25.6502, 0, 5.18643)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.947289, 0.320382, 0, -0.320382, 0.947289, 0, 35.7513, 66.2825)
@@ -40,5 +49,23 @@ transform = Transform3D(1, 0, 0, 0, 0.947289, 0.320382, 0, -0.320382, 0.947289, 
 [node name="parede1" parent="." instance=ExtResource("7_x5fet")]
 transform = Transform3D(5.92, 0, 0, 0, 5.92, 0, 0, 0, 5.92, -1.77038, -1.50781, -29.6323)
 
-[node name="Sketchfab_Scene" parent="." instance=ExtResource("8_nk7vd")]
+[node name="telefon" parent="." instance=ExtResource("8_nk7vd")]
 transform = Transform3D(0.0291217, 0, -0.0175479, 0, 0.034, 0, 0.0175479, 0, 0.0291217, 14.4731, 12.5448, 9.90109)
+
+[node name="relogio" parent="." instance=ExtResource("8_faq3j")]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 0.633155, 27.2897, -2.37874)
+
+[node name="coat" parent="." instance=ExtResource("9_faq3j")]
+transform = Transform3D(16.13, 0, 0, 0, 16.13, 0, 0, 0, 16.13, -25.3856, 0.53759, 6.75433)
+
+[node name="pencilcase" parent="." instance=ExtResource("10_2s007")]
+transform = Transform3D(0.16, 0, 0, 0, 0.16, 0, 0, 0, 0.16, -15.1103, 12.7095, 6.09744)
+
+[node name="lapisazul" parent="." instance=ExtResource("11_6yvp7")]
+transform = Transform3D(34.93, 0, 0, 0, 29.4469, -18.7879, 0, 18.7879, 29.4469, -15.2644, 15.0071, 6.66356)
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("12_6yvp7")]
+transform = Transform3D(117.105, 0, -26.2017, 0, 120, 0, 26.2017, 0, 117.105, 13.439, 21.506, 4.19445)
+
+[connection signal="input_event" from="reelClick" to="reelClick/CollisionShape3D/reel2reel" method="_on_area_3d_input_event"]
+[connection signal="mouse_entered" from="reelClick" to="reelClick/CollisionShape3D/reel2reel" method="enterMouse"]
