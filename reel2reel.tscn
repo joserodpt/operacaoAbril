@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dogcaj11qbpda"]
 
-[ext_resource type="PackedScene" uid="uid://3736gwq68xww" path="res://reel-to-reel_tape_recorder/scene.gltf" id="1_5skst"]
+[ext_resource type="PackedScene" uid="uid://3736gwq68xww" path="res://assets/reel-to-reel_tape_recorder/scene.gltf" id="1_5skst"]
 [ext_resource type="Script" uid="uid://bkhcfebtqblex" path="res://reel2reel.gd" id="2_kwotf"]
 
 [node name="Sketchfab_Scene" instance=ExtResource("1_5skst")]

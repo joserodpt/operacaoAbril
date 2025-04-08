@@ -1,6 +1,6 @@
 extends Camera3D
 
-@export var target_position: Vector3 = Vector3(5, 3, -10)  # Target position
+@export var target_position: Vector3 = Vector3(0, 1.39, 0.85)  # Target position
 @export var target_rotation: Vector3 = Vector3(0, 90, 0)  # Target rotation in degrees
 @export var duration: float = 2.0  # Duration in seconds
 
